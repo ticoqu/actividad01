@@ -18,24 +18,34 @@ Captura de pantalla del resultado de `terraform --version`.
 1. **Actualizar el sistema**
    ```bash
    sudo apt update && sudo apt upgrade -y
+   ```
    
 2. **Instalar dependencias necesarias**
-```bash
-sudo apt install -y curl wget gnupg software-properties-common
+   ```bash
+   sudo apt install -y curl wget gnupg software-properties-common
+   ```
 
 3. **Descargar e instalar Terraform - Descarga la última versión estable:**
-```bash
-wget https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip
+   ```bash
+   wget https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip
+   ```
+   
+   Descomprime el archivo:
+   ```bash
+   unzip terraform_1.7.5_linux_amd64.zip
+   ```
+   
+   Mueve el binario al directorio /usr/local/bin/:
+   ```bash
+   sudo mv terraform /usr/local/bin/
+   ```
 
-Descomprime el archivo:
-```bash
-unzip terraform_1.7.5_linux_amd64.zip
-
-Mueve el binario al directorio /usr/local/bin/:
-sudo mv terraform /usr/local/bin/
-
-4. **Verificar la instalación**
-terraform --version
-
-5. **Opcional: Configurar autocompletado**
-terraform -install-autocomplete
+5. **Verificar la instalación**
+   ```bash
+   terraform --version
+   ```
+   
+7. **Opcional: Configurar autocompletado**
+   ```bash
+   terraform -install-autocomplete
+   ```
