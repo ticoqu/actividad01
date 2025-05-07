@@ -18,3 +18,13 @@ Captura de pantalla del resultado de `terraform --version`.
 1. **Actualizar el sistema**
    ```bash
    sudo apt update && sudo apt upgrade -y
+
+```bash
+sudo apt install -y curl wget gnupg software-properties-common
+wget https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip
+unzip terraform_1.7.5_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+
+terraform --version
+
+terraform -install-autocomplete
